@@ -38,6 +38,8 @@ public final class Triviacommands extends JavaPlugin implements Listener {
                         cmd.replace("{player}", playerName));
             }
             difficulty = null;
+        }else if (difficulty != null && (msg.contains("The quiz is over! No one has given the correct answer."))){
+            difficulty = null;
         }
     }
 }
