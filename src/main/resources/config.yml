@@ -1,0 +1,7 @@
+rewards:
+  beginner:
+    - "eco give {player} 100"
+  advanced:
+    - "eco give {player} 200"
+  expert:
+    - "eco give {player} 300"
