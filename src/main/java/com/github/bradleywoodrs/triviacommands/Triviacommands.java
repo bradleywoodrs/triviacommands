@@ -37,7 +37,10 @@ public final class Triviacommands extends JavaPlugin implements Listener {
                 Bukkit.dispatchCommand(Bukkit.getConsoleSender(),
                         cmd.replace("{player}", playerName));
             }
-            difficulty = null;
+            Bukkit.getScheduler().runTaskLaterAsynchronously(this, () -> {
+                difficulty = null;
+            }, 100L);
+
         }else if (difficulty != null && (msg.contains("The quiz is over! No one has given the correct answer."))){
             difficulty = null;
         }
